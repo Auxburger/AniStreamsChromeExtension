@@ -3,25 +3,31 @@
   "name": "AniStreams Blank",
   "description": "This Extension enhances your life by opening the AniStream videos in a blank tab.",
   "version": "1.0",
-  "content_scripts":[
-      {
-        "matches":[
-          "https://naruto-tube.org/*",
-          "https://onepiece-tube.org/*"
-        ],
-        "run_at": "document_end",
-        "js":["libs/jquery-3.6.0.min.js", "content.js"]
-      }
-    ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://naruto-tube.org/*",
+        "https://onepiece-tube.org/*"
+      ],
+      "run_at": "document_end",
+      "js": [
+        "libs/jquery-3.6.0.min.js",
+        "content.js"
+      ]
+    }
+  ],
   "browser_action": {
-    },
+    "default_popup": "popup.html"
+  },
   "background": {
-        "scripts": ["background.js"],
-        "persistent": false
-      },
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": false
+  },
   "permissions": [
-      "activeTab",
-      "storage",
-      "https://ajax.googleapis.com/"
-    ]
-  }
+    "activeTab",
+    "storage",
+    "https://ajax.googleapis.com/"
+  ]
+}
